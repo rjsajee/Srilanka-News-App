@@ -16,12 +16,7 @@ public class TamilWeb extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if(myweb.canGoBack()){
-            myweb.goBack();
-        }
-        else{
-            super.onBackPressed();
-        }
+        startActivity(new Intent(this, TamilList.class));
 
     }
 

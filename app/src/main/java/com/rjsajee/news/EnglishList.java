@@ -10,7 +10,16 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.OnUserEarnedRewardListener;
+import com.google.android.gms.ads.rewarded.RewardItem;
+import com.google.android.gms.ads.rewarded.RewardedAd;
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
+
 public class EnglishList extends AppCompatActivity {
+    private RewardedAd mRewardedAd;
 
     Button btn1;
     Button btn2;
@@ -65,214 +74,209 @@ public class EnglishList extends AppCompatActivity {
 
 
 
-        urls[0]="http://www.sundayobserver.lk/";
-        urls[1]="http://www.dailymirror.lk/";
-        urls[2]="http://www.sundaytimes.lk";
-        urls[3]="http://www.island.lk";
-        urls[4]="http://www.ft.lk";
-        urls[5]="http://www.thesundayleader.lk";
-        urls[6]="http://www.ceylontoday.lk/";
-        urls[7]="http://www.hirunews.lk";
-        urls[8]="http://www.colombopage.com/";
-        urls[9]="http://www.islandcricket.lk/";
-        urls[10]="http://www.lankatruth.com";
-        urls[11]="http://www.news.lk";
-        urls[12]="http://www.english.lankapuvath.lk/";
-        urls[13]="http://www.asianmirror.lk/";
-        urls[14]="http://www.theacademic.org/";
-        urls[15]="http://www.colombogazette.com/";
-        urls[16]="http://www.colombotelegraph.com/";
-        urls[17]="http://www.lankaenews.com/";
-        urls[18]="http://www.news.lk/";
-        urls[19]="http://www.srilankamirror.com/";
-        urls[20]="http://www.newsfirst.lk/";
+        urls[0]="https://www.sundayobserver.lk/";
+        urls[1]="https://www.dailymirror.lk/";
+        urls[2]="https://www.sundaytimes.lk";
+        urls[3]="https://www.island.lk";
+        urls[4]="https://www.ft.lk";
+        urls[5]="https://www.thesundayleader.lk";
+        urls[6]="https://www.ceylontoday.lk/";
+        urls[7]="https://www.hirunews.lk";
+        urls[8]="https://www.colombopage.com/";
+        urls[9]="https://www.islandcricket.lk/";
+        urls[10]="https://www.lankatruth.com";
+        urls[11]="https://www.news.lk";
+        urls[12]="https://www.english.lankapuvath.lk/";
+        urls[13]="https://www.asianmirror.lk/";
+        urls[14]="https://www.theacademic.org/";
+        urls[15]="https://www.colombogazette.com/";
+        urls[16]="https://www.colombotelegraph.com/";
+        urls[17]="https://www.lankaenews.com/";
+        urls[18]="https://www.news.lk/";
+        urls[19]="https://www.srilankamirror.com/";
+        urls[20]="https://www.newsfirst.lk/";
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[0]);
-                startActivity(intent);
+                int a = 1;
+                setAds(a);
             }
         });
 
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[1]);
-                startActivity(intent);
+                int a = 2;
+                setAds(a);
             }
         });
 
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[2]);
-                startActivity(intent);
+                int a = 3;
+                setAds(a);
             }
         });
 
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[3]);
-                startActivity(intent);
+                int a = 4;
+                setAds(a);
             }
         });
 
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[4]);
-                startActivity(intent);
+                int a = 5;
+                setAds(a);
             }
         });
 
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[5]);
-                startActivity(intent);
+                int a = 6;
+                setAds(a);
             }
         });
 
         btn7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[6]);
-                startActivity(intent);
+                int a = 7;
+                setAds(a);
             }
         });
 
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[7]);
-                startActivity(intent);
+                int a = 8;
+                setAds(a);
             }
         });
 
         btn9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[8]);
-                startActivity(intent);
+                int a = 9;
+                setAds(a);
             }
         });
 
         btn10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[9]);
-                startActivity(intent);
+                int a = 10;
+                setAds(a);
             }
         });
 
         btn11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[10]);
-                startActivity(intent);
+                int a = 11;
+                setAds(a);
             }
         });
 
         btn12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[11]);
-                startActivity(intent);
+                int a = 12;
+                setAds(a);
             }
         });
 
         btn13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[12]);
-                startActivity(intent);
+                int a = 13;
+                setAds(a);
             }
         });
 
         btn14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[13]);
-                startActivity(intent);
+                int a = 14;
+                setAds(a);
             }
         });
 
         btn15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[14]);
-                startActivity(intent);
+                int a = 15;
+                setAds(a);
             }
         });
 
         btn16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[15]);
-                startActivity(intent);
+                int a = 16;
+                setAds(a);
             }
         });
 
         btn17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[16]);
-                startActivity(intent);
+                int a = 17;
+                setAds(a);
             }
         });
 
         btn18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[17]);
-                startActivity(intent);
+                int a = 18;
+                setAds(a);
             }
         });
 
         btn19.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[18]);
-                startActivity(intent);
+                int a = 19;
+                setAds(a);
             }
         });
 
         btn20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[19]);
-                startActivity(intent);
+                int a = 20;
+                setAds(a);
             }
         });
 
         btn21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
-                intent.putExtra("links",urls[20]);
-                startActivity(intent);
+                int a = 21;
+                setAds(a);
+            }
+        });
+
+//        intiate Reward Ad
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+        RewardedAd.load(this,getString(R.string.adunitIdReward), adRequest, new RewardedAdLoadCallback() {
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                // Handle the error.
+                mRewardedAd = null;
+            }
+
+            @Override
+            public void onAdLoaded(@NonNull RewardedAd rewardedAd) {
+                mRewardedAd = rewardedAd;
             }
         });
     }
@@ -302,5 +306,136 @@ public class EnglishList extends AppCompatActivity {
 
         }
         return super.onOptionsItemSelected(item);
+    }
+    void setAds(final int a){
+        if (mRewardedAd != null) {
+            EnglishList activityContext = EnglishList.this;
+            mRewardedAd.show(activityContext, new OnUserEarnedRewardListener() {
+                @Override
+                public void onUserEarnedReward(@NonNull RewardItem rewardItem) {
+                    // Handle the reward.
+                    int rewardAmount = rewardItem.getAmount();
+                    String rewardType = rewardItem.getType();
+                }
+            });
+
+            mRewardedAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                @Override
+                public void onAdDismissedFullScreenContent() {
+                    super.onAdDismissedFullScreenContent();
+                    if(a==1){
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[0]);
+                        startActivity(intent);
+                    }
+                    else if(a==2) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[1]);
+                        startActivity(intent);
+                    }
+                    else if(a==3) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[2]);
+                        startActivity(intent);
+                    }
+                    else if(a==4) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[3]);
+                        startActivity(intent);
+                    }
+                    else if(a==5) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[4]);
+                        startActivity(intent);
+                    }
+                    else if(a==6) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[5]);
+                        startActivity(intent);
+                    }
+                    else if(a==7) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[6]);
+                        startActivity(intent);
+                    }
+                    else if(a==8) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[7]);
+                        startActivity(intent);
+                    }
+                    else if(a==9) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[8]);
+                        startActivity(intent);
+                    }
+                    else if(a==10) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[9]);
+                        startActivity(intent);
+                    }
+                    else if(a==11) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[10]);
+                        startActivity(intent);
+                    }
+                    else if(a==12) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[11]);
+                        startActivity(intent);
+                    }
+                    else if(a==13) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[12]);
+                        startActivity(intent);
+                    }
+                    else if(a==14) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[13]);
+                        startActivity(intent);
+                    }
+                    else if(a==15) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[14]);
+                        startActivity(intent);
+                    }
+                    else if(a==16) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[15]);
+                        startActivity(intent);
+                    }
+                    else if(a==17) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[16]);
+                        startActivity(intent);
+                    }
+                    else if(a==18) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[17]);
+                        startActivity(intent);
+                    }
+                    else if(a==19) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[18]);
+                        startActivity(intent);
+                    }
+                    else if(a==20) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[19]);
+                        startActivity(intent);
+                    }
+                    else if(a==21) {
+                        Intent intent=new Intent(getApplicationContext(), EnglishWeb.class);
+                        intent.putExtra("links",urls[20]);
+                        startActivity(intent);
+                    }
+                    mRewardedAd=null;
+                }
+            });
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, Home.class));
     }
 }

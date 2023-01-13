@@ -10,7 +10,16 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.OnUserEarnedRewardListener;
+import com.google.android.gms.ads.rewarded.RewardItem;
+import com.google.android.gms.ads.rewarded.RewardedAd;
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
+
 public class ShinhalaList extends AppCompatActivity {
+    private RewardedAd mRewardedAd;
 
     Button btn1;
     Button btn2;
@@ -55,161 +64,158 @@ public class ShinhalaList extends AppCompatActivity {
 
 
 
-        urls[0]="http://www.dinamina.lk/";
-        urls[1]="http://www.divaina.lk/";
-        urls[2]="http://www.lankadeepa.lk";
-        urls[3]="http://www.hirunews.lk/";
-        urls[4]="http://www.lakbima.lk/";
-        urls[5]="http://www.gossiplankanews.lk";
-        urls[6]="http://www.adaderana.lk/";
-        urls[7]="http://www.silumina.lk/";
-        urls[8]="http://www.mawbima.lk";
-        urls[9]="http://www.ada.lk/#";
-        urls[10]="http://www.bbc.com/sinhala";
-        urls[11]="http://www.lankaviews.lk";
-        urls[12]="http://www.deshaya.lk/";
-        urls[13]="http://www.vimasuma.com/";
-        urls[14]="http://www.sinhala.news.lk/";
+        urls[0]="https://www.dinamina.lk/";
+        urls[1]="https://www.divaina.lk/";
+        urls[2]="https://www.lankadeepa.lk";
+        urls[3]="https://www.hirunews.lk/";
+        urls[4]="https://www.lakbima.lk/";
+        urls[5]="https://www.gossiplankanews.lk";
+        urls[6]="https://www.adaderana.lk/";
+        urls[7]="https://www.silumina.lk/";
+        urls[8]="https://www.mawbima.lk";
+        urls[9]="https://www.ada.lk/#";
+        urls[10]="https://www.bbc.com/sinhala";
+        urls[11]="https://www.lankaviews.lk";
+        urls[12]="https://www.deshaya.lk/";
+        urls[13]="https://www.vimasuma.com/";
+        urls[14]="https://www.sinhala.news.lk/";
 
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
-                intent.putExtra("links",urls[0]);
-                startActivity(intent);
+                int a = 1;
+                setAds(a);
             }
         });
 
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
-                intent.putExtra("links",urls[1]);
-                startActivity(intent);
+                int a = 2;
+                setAds(a);
             }
         });
 
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
-                intent.putExtra("links",urls[2]);
-                startActivity(intent);
+                int a = 3;
+                setAds(a);
             }
         });
 
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
-                intent.putExtra("links",urls[3]);
-                startActivity(intent);
+                int a = 4;
+                setAds(a);
             }
         });
 
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
-                intent.putExtra("links",urls[4]);
-                startActivity(intent);
+                int a = 5;
+                setAds(a);
             }
         });
 
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
-                intent.putExtra("links",urls[5]);
-                startActivity(intent);
+                int a = 6;
+                setAds(a);
             }
         });
 
         btn7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
-                intent.putExtra("links",urls[6]);
-                startActivity(intent);
+                int a = 7;
+                setAds(a);
             }
         });
 
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
-                intent.putExtra("links",urls[7]);
-                startActivity(intent);
+                int a = 8;
+                setAds(a);
             }
         });
 
         btn9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
-                intent.putExtra("links",urls[8]);
-                startActivity(intent);
+                int a = 9;
+                setAds(a);
             }
         });
 
         btn10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
-                intent.putExtra("links",urls[9]);
-                startActivity(intent);
+                int a = 10;
+                setAds(a);
             }
         });
 
         btn11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
-                intent.putExtra("links",urls[10]);
-                startActivity(intent);
+                int a = 11;
+                setAds(a);
             }
         });
 
         btn12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
-                intent.putExtra("links",urls[11]);
-                startActivity(intent);
+                int a = 12;
+                setAds(a);
             }
         });
 
         btn13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
-                intent.putExtra("links",urls[12]);
-                startActivity(intent);
+                int a = 13;
+                setAds(a);
             }
         });
 
         btn14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
-                intent.putExtra("links",urls[13]);
-                startActivity(intent);
+                int a = 14;
+                setAds(a);
             }
         });
 
         btn15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
-                intent.putExtra("links",urls[14]);
-                startActivity(intent);
+                int a = 15;
+                setAds(a);
             }
         });
 
+//        intiate Reward Ad
 
+        AdRequest adRequest = new AdRequest.Builder().build();
+        RewardedAd.load(this,getString(R.string.adunitIdReward), adRequest, new RewardedAdLoadCallback() {
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                // Handle the error.
+                mRewardedAd = null;
+            }
 
-
+            @Override
+            public void onAdLoaded(@NonNull RewardedAd rewardedAd) {
+                mRewardedAd = rewardedAd;
+            }
+        });
 
     }
 
@@ -239,5 +245,107 @@ public class ShinhalaList extends AppCompatActivity {
 
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    void setAds(final int a){
+        if (mRewardedAd != null) {
+            ShinhalaList activityContext = ShinhalaList.this;
+            mRewardedAd.show(activityContext, new OnUserEarnedRewardListener() {
+                @Override
+                public void onUserEarnedReward(@NonNull RewardItem rewardItem) {
+                    // Handle the reward.
+                    int rewardAmount = rewardItem.getAmount();
+                    String rewardType = rewardItem.getType();
+                }
+            });
+
+            mRewardedAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                @Override
+                public void onAdDismissedFullScreenContent() {
+                    super.onAdDismissedFullScreenContent();
+                    if(a==1){
+                        Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
+                        intent.putExtra("links",urls[0]);
+                        startActivity(intent);
+                    }
+                    else if(a==2) {
+                        Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
+                        intent.putExtra("links",urls[1]);
+                        startActivity(intent);
+                    }
+                    else if(a==3) {
+                        Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
+                        intent.putExtra("links",urls[2]);
+                        startActivity(intent);
+                    }
+                    else if(a==4) {
+                        Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
+                        intent.putExtra("links",urls[3]);
+                        startActivity(intent);
+                    }
+                    else if(a==5) {
+                        Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
+                        intent.putExtra("links",urls[4]);
+                        startActivity(intent);
+                    }
+                    else if(a==6) {
+                        Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
+                        intent.putExtra("links",urls[5]);
+                        startActivity(intent);
+                    }
+                    else if(a==7) {
+                        Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
+                        intent.putExtra("links",urls[6]);
+                        startActivity(intent);
+                    }
+                    else if(a==8) {
+                        Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
+                        intent.putExtra("links",urls[7]);
+                        startActivity(intent);
+                    }
+                    else if(a==9) {
+                        Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
+                        intent.putExtra("links",urls[8]);
+                        startActivity(intent);
+                    }
+                    else if(a==10) {
+                        Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
+                        intent.putExtra("links",urls[9]);
+                        startActivity(intent);
+                    }
+                    else if(a==11) {
+                        Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
+                        intent.putExtra("links",urls[10]);
+                        startActivity(intent);
+                    }
+                    else if(a==12) {
+                        Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
+                        intent.putExtra("links",urls[11]);
+                        startActivity(intent);
+                    }
+                    else if(a==13) {
+                        Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
+                        intent.putExtra("links",urls[12]);
+                        startActivity(intent);
+                    }
+                    else if(a==14) {
+                        Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
+                        intent.putExtra("links",urls[13]);
+                        startActivity(intent);
+                    }
+                    else if(a==15) {
+                        Intent intent=new Intent(getApplicationContext(), ShinhalaWeb.class);
+                        intent.putExtra("links",urls[14]);
+                        startActivity(intent);
+                    }
+                    mRewardedAd=null;
+                }
+            });
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, Home.class));
     }
 }
